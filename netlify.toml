@@ -1,4 +1,7 @@
+# MASTER NETLIFY CONFIGURATION (Root Monorepo)
+
 [build]
+  base = "frontend"
   command = "npm run build"
   publish = "dist"
 
