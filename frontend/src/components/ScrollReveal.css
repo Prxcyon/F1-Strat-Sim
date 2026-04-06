@@ -1,0 +1,44 @@
+.scroll-reveal {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10vh 15vw;
+  box-sizing: border-box;
+  text-align: center;
+  z-index: 5;
+}
+
+.scroll-reveal-text {
+  font-family: 'Outfit', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.word {
+  display: inline-block;
+  margin-right: 0.25em;
+  white-space: pre-wrap;
+}
+
+@media (max-width: 1024px) {
+  .scroll-reveal-text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .scroll-reveal {
+    padding: 5vh 5vw;
+  }
+  .scroll-reveal-text {
+    font-size: 1.8rem;
+  }
+}

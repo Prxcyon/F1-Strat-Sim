@@ -1,0 +1,35 @@
+# F1 Strategy Engine - GitHub Optimization
+
+# Data & Results (Moved to Supabase)
+data/
+results/
+backend/data/
+backend/results/
+
+# 3D Assets (Moved to Supabase Storage)
+frontend/public/*.glb
+frontend/public/*.gltf
+
+# Environment & Secrets
+.env
+frontend/.env.local
+backend/.env
+.venv/
+env/
+venv/
+ENV/
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+backend/__pycache__/
+*.pyc
+
+# Build Artifacts
+frontend/dist/
+dist/
+.netlify/
+
+# OS Specific
+.DS_Store
+Thumbs.db

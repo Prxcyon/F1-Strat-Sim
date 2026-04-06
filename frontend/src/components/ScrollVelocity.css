@@ -1,0 +1,26 @@
+.parallax {
+  overflow: hidden;
+  margin: 0;
+  white-space: nowrap;
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100vw;
+  /* To ensure it spans the whole screen width */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroller {
+  display: flex;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+
+.scroll-text {
+  font-size: 20px;
+  color: #aaa;
+  font-family: inherit;
+  display: block;
+  margin-right: 50px;
+}

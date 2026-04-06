@@ -1,0 +1,60 @@
+.target-cursor-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  will-change: transform;
+}
+
+.target-cursor-dot {
+  width: 4px;
+  height: 4px;
+  background-color: var(--accent);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--accent);
+}
+
+.target-cursor-corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-color: var(--accent);
+  border-style: solid;
+  opacity: 0.8;
+  transition: border-color 0.3s ease;
+}
+
+.corner-tl {
+  top: -10px;
+  left: -10px;
+  border-width: 2px 0 0 2px;
+}
+
+.corner-tr {
+  top: -10px;
+  right: -10px;
+  border-width: 2px 2px 0 0;
+}
+
+.corner-br {
+  bottom: -10px;
+  right: -10px;
+  border-width: 0 2px 2px 0;
+}
+
+.corner-bl {
+  bottom: -10px;
+  left: -10px;
+  border-width: 0 0 2px 2px;
+}
+
+/* Ensure the accent color is used */
+:root {
+  --accent: #c99cf7;
+}
