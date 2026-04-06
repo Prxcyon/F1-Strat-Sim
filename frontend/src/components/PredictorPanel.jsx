@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react'
 import Loader from './Loader'
+import { API_BASE_URL } from '../api_config'
 import BorderGlow from './BorderGlow'
 import TiltedCard from './TiltedCard'
 
@@ -28,7 +29,7 @@ export default function PredictorPanel({ config }) {
   const runPrediction = useCallback(async () => {
     setLoading(true)
     try {
-      const res = await fetch('http://localhost:8000/predict-winner', {
+      const res = await fetch(`${API_BASE_URL}/predict-winner`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

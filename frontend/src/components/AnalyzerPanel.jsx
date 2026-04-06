@@ -1,5 +1,6 @@
 import { useState, useCallback } from 'react'
 import Loader from './Loader'
+import { API_BASE_URL } from '../api_config'
 import BorderGlow from './BorderGlow'
 import CyberInput from './CyberInput'
 import {
@@ -20,7 +21,7 @@ export default function AnalyzerPanel({ config }) {
     setLoading(true)
     try {
       const gPrix = config.grandPrix.split(' ')[0] 
-      const res = await fetch('http://localhost:8000/compare-drivers', {
+      const res = await fetch(`${API_BASE_URL}/compare-drivers`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
