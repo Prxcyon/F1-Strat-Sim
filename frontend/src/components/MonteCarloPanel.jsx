@@ -33,7 +33,7 @@ export default function MonteCarloPanel({ results, selected, onToggle }) {
   }))
 
   return (
-    <div style={{ padding: '20px', height: '100%', overflowY: 'auto' }}>
+    <div style={{ padding: '20px' }}>
       <div className="pills-row" style={{ marginBottom: '20px' }}>
         {results.slice(0, 8).map((r, i) => (
           <span key={r.name} className={`pill cursor-target ${selected.includes(r.name) ? 'on' : ''}`} onClick={() => onToggle(r.name)}>

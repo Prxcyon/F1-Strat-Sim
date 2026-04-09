@@ -71,7 +71,7 @@ export default function App() {
             isGalleryOpen={isGalleryOpen}
             setIsGalleryOpen={setIsGalleryOpen}
           />
-        <main className="main" style={{ flex: 1, overflow: 'hidden', display: 'flex', flexDirection: 'column', height: '100%' }}>
+        <main className="main" style={{ flex: 1, display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden', minWidth: 0 }}>
           <div className="mode-switch" style={{ display: 'flex', gap: '10px', padding: '15px 30px', borderBottom: '1px solid rgba(255,255,255,0.05)', background: 'var(--bg2)', zIndex: 20 }}>
             <button 
               className={`tab-btn cursor-target ${appMode === 'optimizer' ? 'active' : ''}`}
@@ -130,7 +130,7 @@ export default function App() {
                 ))}
               </nav>
 
-              <div className="panel-area" style={{ flex: 1, minHeight: 0, display: 'flex', flexDirection: 'column', height: '100%' }}>
+              <div className="panel-area" style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
                 {activeTab === 'optimizer'   && <OptimizerPanel results={results} selected={selectedStrats} onToggle={toggleStrat} config={config} />}
                 {activeTab === 'laptime'     && <LapTimePanel results={results} selected={selectedStrats} onToggle={toggleStrat} />}
                 {activeTab === 'degradation' && <DegradationPanel />}
