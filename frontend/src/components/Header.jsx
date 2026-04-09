@@ -4,8 +4,8 @@ import TextPressure from './TextPressure';
 export default function Header({ grandPrix, hasResults }) {
   return (
     <header className="header" style={{ 
-      padding: '15px 30px', 
-      height: '120px', 
+      padding: '10px 30px', 
+      height: '160px', 
       display: 'flex', 
       flexDirection: 'column', 
       alignItems: 'center', 
@@ -13,26 +13,26 @@ export default function Header({ grandPrix, hasResults }) {
       borderBottom: '1px solid rgba(255,255,255,0.05)',
       position: 'relative'
     }}>
-      {/* Title Container - Increased marginBottom and moved up using padding-top */}
-      <div style={{ width: '100%', maxWidth: '450px', height: '40px', pointerEvents: 'none', marginBottom: '20px', marginTop: '10px' }}>
+      {/* Title Container - Moved to absolute top with fixed height and large margin below */}
+      <div style={{ width: '100%', maxWidth: '450px', height: '40px', pointerEvents: 'none', marginBottom: '60px', marginTop: '10px' }}>
         <TextPressure 
           text={`${grandPrix} Grand Prix Strategy`}
           textColor="white"
-          minFontSize={20}
+          minFontSize={18}
           scale={true}
           flex={true}
         />
       </div>
       
       {hasResults && (
-        <div style={{ pointerEvents: 'none' }}>
+        <div style={{ pointerEvents: 'none', position: 'relative', zIndex: 1 }}>
           <span style={{ 
             color: '#39B54A', 
             fontSize: '11px', 
             fontWeight: '900', 
-            letterSpacing: '3px', 
+            letterSpacing: '4px', 
             textTransform: 'uppercase',
-            opacity: 0.9
+            opacity: 1
           }}>
             RESULTS READY
           </span>
