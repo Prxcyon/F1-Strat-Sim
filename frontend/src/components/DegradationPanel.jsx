@@ -26,7 +26,7 @@ const data = ages.map(age => ({
 
 export default function DegradationPanel() {
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ padding: '20px', height: '100%', overflowY: 'auto' }}>
       <BorderGlow className="cursor-target" borderRadius={12} glowIntensity={0.2}>
         <div className="chart-card" style={{ border: 'none', margin: 0 }}>
           <p className="chart-title">Tyre Degradation — Time Loss vs Fresh Tyre</p>

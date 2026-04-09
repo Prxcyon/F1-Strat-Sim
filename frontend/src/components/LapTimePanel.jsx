@@ -24,7 +24,7 @@ export default function LapTimePanel({ results, selected, onToggle }) {
   const allPitLaps = sel.flatMap(r => r.pits.map(p => ({ lap: p.lap, strat: r.name })))
 
   return (
-    <div style={{ padding: '10px' }}>
+    <div style={{ padding: '10px', height: '100%', overflowY: 'auto' }}>
       <div className="pills-row" style={{ marginBottom: '20px' }}>
         {results.slice(0, 8).map((r, i) => (
           <span

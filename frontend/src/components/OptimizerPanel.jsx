@@ -38,7 +38,7 @@ export default function OptimizerPanel({ results, selected, onToggle, config }) 
   }
 
   return (
-    <div style={{ padding: '20px' }}>
+    <div style={{ padding: '20px', height: '100%', overflowY: 'auto', display: 'flex', flexDirection: 'column' }}>
       <div className="strat-grid">
         {results.slice(0, 8).map((r, i) => {
           const delta = r.mc.mean - base
