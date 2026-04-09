@@ -118,7 +118,7 @@ export default function App() {
                 ))}
               </div>
 
-              <nav className="tab-bar">
+              <nav className="tab-bar" style={{ marginTop: '20px' }}>
                 {TABS.map(t => (
                   <button
                     key={t.id}
