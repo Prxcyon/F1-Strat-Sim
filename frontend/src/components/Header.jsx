@@ -4,17 +4,17 @@ import TextPressure from './TextPressure';
 export default function Header({ grandPrix, hasResults }) {
   return (
     <header className="header" style={{ 
-      padding: '20px 30px', 
-      height: '110px', 
+      padding: '15px 30px', 
+      height: '120px', 
       display: 'flex', 
       flexDirection: 'column', 
       alignItems: 'center', 
-      justifyContent: 'center',
+      justifyContent: 'flex-start',
       borderBottom: '1px solid rgba(255,255,255,0.05)',
       position: 'relative'
     }}>
-      {/* Title Container - Capped at 450px to constrain automatic scaling */}
-      <div style={{ width: '100%', maxWidth: '450px', height: '40px', pointerEvents: 'none', marginBottom: '8px' }}>
+      {/* Title Container - Increased marginBottom and moved up using padding-top */}
+      <div style={{ width: '100%', maxWidth: '450px', height: '40px', pointerEvents: 'none', marginBottom: '20px', marginTop: '10px' }}>
         <TextPressure 
           text={`${grandPrix} Grand Prix Strategy`}
           textColor="white"
@@ -32,7 +32,7 @@ export default function Header({ grandPrix, hasResults }) {
             fontWeight: '900', 
             letterSpacing: '3px', 
             textTransform: 'uppercase',
-            opacity: 0.8
+            opacity: 0.9
           }}>
             RESULTS READY
           </span>
