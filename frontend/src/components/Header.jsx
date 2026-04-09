@@ -3,8 +3,18 @@ import TextPressure from './TextPressure';
 
 export default function Header({ grandPrix, hasResults }) {
   return (
-    <header className="header" style={{ padding: '15px 30px', borderBottom: '1px solid rgba(255,255,255,0.05)', height: '120px', position: 'relative', zIndex: 10, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ width: '100%', maxWidth: '600px', height: '50px', pointerEvents: 'none' }}>
+    <header className="header" style={{ 
+      padding: '20px 30px', 
+      height: '110px', 
+      display: 'flex', 
+      flexDirection: 'column', 
+      alignItems: 'center', 
+      justifyContent: 'center',
+      borderBottom: '1px solid rgba(255,255,255,0.05)',
+      position: 'relative'
+    }}>
+      {/* Title Container - Capped at 450px to constrain automatic scaling */}
+      <div style={{ width: '100%', maxWidth: '450px', height: '40px', pointerEvents: 'none', marginBottom: '8px' }}>
         <TextPressure 
           text={`${grandPrix} Grand Prix Strategy`}
           textColor="white"
@@ -13,7 +23,21 @@ export default function Header({ grandPrix, hasResults }) {
           flex={true}
         />
       </div>
-      {hasResults && <span style={{ color: '#4caf50', marginTop: '10px', display: 'block', fontSize: '11px', fontWeight: 'bold', letterSpacing: '2px', textTransform: 'uppercase' }}>RESULTS READY</span>}
+      
+      {hasResults && (
+        <div style={{ pointerEvents: 'none' }}>
+          <span style={{ 
+            color: '#39B54A', 
+            fontSize: '11px', 
+            fontWeight: '900', 
+            letterSpacing: '3px', 
+            textTransform: 'uppercase',
+            opacity: 0.8
+          }}>
+            RESULTS READY
+          </span>
+        </div>
+      )}
     </header>
   );
 }
