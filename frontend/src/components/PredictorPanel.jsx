@@ -49,7 +49,7 @@ export default function PredictorPanel({ config }) {
   }, [config])
 
   return (
-    <div className="predictor-panel" style={{ height: '100%', display: 'flex', flexDirection: 'column', overflowY: 'auto', padding: '10px 30px', color: '#fff' }}>
+    <div className="predictor-panel" style={{ display: 'flex', flexDirection: 'column', padding: '10px 30px', color: '#fff' }}>
       <div className="predictor-header" style={{ marginBottom: '40px', display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
         <div>
           <h2 style={{ margin: 0, fontSize: '1.8rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '2px' }}>ML Winner Predictor</h2>

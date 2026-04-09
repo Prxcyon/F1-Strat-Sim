@@ -95,8 +95,8 @@ export default function App() {
               Telemetry Analyzer
             </button>
           </div>
-
-          {appMode === 'optimizer' && (
+          <div className="mode-scroll-container" style={{ flex: 1, overflowY: 'auto', minHeight: 0, display: 'flex', flexDirection: 'column' }}>
+            {appMode === 'optimizer' && (
             <>
               <Header grandPrix={config.grandPrix} hasResults={!!results} />
 
@@ -130,7 +130,7 @@ export default function App() {
                 ))}
               </nav>
 
-              <div className="panel-area" style={{ flex: 1, overflowY: 'auto', display: 'flex', flexDirection: 'column', minHeight: 0 }}>
+              <div className="panel-area" style={{ flex: 1, display: 'flex', flexDirection: 'column', minHeight: 'fit-content' }}>
                 {activeTab === 'optimizer'   && <OptimizerPanel results={results} selected={selectedStrats} onToggle={toggleStrat} config={config} />}
                 {activeTab === 'laptime'     && <LapTimePanel results={results} selected={selectedStrats} onToggle={toggleStrat} />}
                 {activeTab === 'degradation' && <DegradationPanel />}
@@ -156,8 +156,9 @@ export default function App() {
             </>
           )}
           
-          {appMode === 'predictor' && <PredictorPanel config={config} />}
-          {appMode === 'analyzer' && <AnalyzerPanel config={config} />}
+              {appMode === 'predictor' && <PredictorPanel config={config} />}
+              {appMode === 'analyzer' && <AnalyzerPanel config={config} />}
+            </div>
         </main>
         </div>
       </LandingPage>

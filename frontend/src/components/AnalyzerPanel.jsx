@@ -109,7 +109,7 @@ export default function AnalyzerPanel({ config }) {
 
       {/* DASHBOARD RENDER */}
       {data && !loading && (
-        <div className="dashboard-scroll" style={{ flex: 1, overflowY: 'auto', paddingRight: '10px' }}>
+        <div className="dashboard-scroll" style={{ paddingRight: '10px' }}>
           <div className="dashboard-content" style={{ display: 'flex', flexDirection: 'column', gap: '20px', paddingBottom: '80px' }}>
             
             {/* TOP STATS CARDS */}
